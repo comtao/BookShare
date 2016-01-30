@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewHead">
+        <attr name="head_color"  format="color"/>
+        <attr name="title_value" format="string"/>
+        <attr name="left_show_icon"   format="boolean"/>
+        <attr name="left_icon"   format="reference"/>   <!-- 是否显示图形 -->
+        <attr name="left_name"   format="string"/>
+
+        <attr name="right_show_icon"  format="boolean"/>
+        <attr name="right_icon"  format="reference"/>
+        <attr name="right_name"  format="string"/>
+    </declare-styleable>
+</resources>
