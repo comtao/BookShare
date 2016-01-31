@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.aty.AtyShareBook"/>
+        <activity android:name=".ui.aty.AtyShowUserInfo"/>
     </application>
 
 </manifest>

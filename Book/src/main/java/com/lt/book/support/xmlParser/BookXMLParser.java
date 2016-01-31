@@ -1,6 +1,6 @@
 package com.lt.book.support.xmlParser;
 
-import com.lt.book.dao.Book;
+import com.lt.book.bean.Book;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
