@@ -32,7 +32,7 @@ public class AtyMain extends AtyBase implements View.OnClickListener {
                 startActivity(new Intent(this,AtyShareBook.class));
                 break;
             case R.id.btn_get:
-                startActivity(new Intent(this,AtyShareBook.class));
+                startActivity(new Intent(this,AtyShowUserInfo.class));
                 break;
             default:
                 break;

@@ -19,6 +19,7 @@ public class GetUserInfoPresenter {
     public GetUserInfoPresenter(IShowUserInfoView iShowUserInfoView) {
         this.iShowUserInfoView = iShowUserInfoView;
         iGetUserInfo = new GetUserInfo();
+        handler =  new Handler();
     }
 
     public void getUserInfo2Show(int id){
