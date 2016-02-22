@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by tao.lai on 2016/1/30 0030.
+ * 2016/2/22
  */
 public class Book implements Serializable {
     private String tags;//书本标签
