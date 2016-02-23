@@ -63,15 +63,15 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".ui.aty.AtyLogin">
+        <activity android:name=".ui.aty.AtyMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.aty.AtyShareBook"/>
-        <!--<activity android:name=".ui.aty.AtyLogin"/>-->
+        <activity android:name=".ui.aty.AtyLogin"/>
         <activity android:name=".ui.aty.AtyRegister"/>
-        <activity android:name=".ui.aty.AtyMain"/>
+        <!--<activity android:name=".ui.aty.AtyMain"/>-->
     </application>
 </manifest>
