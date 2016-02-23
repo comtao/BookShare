@@ -40,7 +40,6 @@ public class AtyMain extends AtyBase{
 
                 if(drawerView.getTag().equals("LEFT")){
                     float leftScale = 1 - 0.3f * scale;
-
                     ViewHelper.setScaleX(mMenu, leftScale);
                     ViewHelper.setScaleY(mMenu, leftScale);
                     ViewHelper.setAlpha(mMenu, 0.6f + 0.4f * (1 - scale));
