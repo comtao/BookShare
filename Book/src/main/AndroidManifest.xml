@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.READ_LOGS"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
     <permission
         android:name="cn.bmob.permission.push"
         android:protectionLevel="normal" >
@@ -62,13 +63,15 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".ui.aty.AtyMain">
+        <activity android:name=".ui.aty.AtyLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.aty.AtyShareBook"/>
-        <activity android:name=".ui.aty.AtyShowUserInfo"/>
+        <!--<activity android:name=".ui.aty.AtyLogin"/>-->
+        <activity android:name=".ui.aty.AtyRegister"/>
+        <activity android:name=".ui.aty.AtyMain"/>
     </application>
 </manifest>

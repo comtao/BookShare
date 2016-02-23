@@ -1,9 +1,11 @@
 package com.lt.book.bean;
 
+import cn.bmob.v3.BmobObject;
+
 /**
  * Created by tao.lai on 2016/1/31 0031.
  */
-public class User {
+public class User extends BmobObject{
     private int id;
     private String name;
     private String passWord;
