@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.lt.book.R;
 import com.lt.book.ui.view.ViewHead;
+import com.lt.book.utils.L;
 import com.lt.book.utils.T;
 import com.nineoldandroids.view.ViewHelper;
 
@@ -37,6 +38,7 @@ public class AtyMain extends AtyBase implements ViewHead.ViewHeadListener{
         mDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
+                L.i("AtyMain","slideOffset="+slideOffset);
                 View mContent = mDrawerLayout.getChildAt(0);
                 View mMenu = drawerView;
                 float scale = 1 - slideOffset;
@@ -77,9 +79,9 @@ public class AtyMain extends AtyBase implements ViewHead.ViewHeadListener{
     @Override
     public void leftListener() {
         T.showShort(this, "左侧菜单显示");
-        View mContent = mDrawerLayout.getChildAt(0);
+        /*View mContent = mDrawerLayout.getChildAt(0);
         View mMenu = mDrawerLayout.getChildAt(1);
-        float slideOffset = (float) 0.5;
+        float slideOffset = (float) 0.8;
         float scale = 1 - slideOffset;
         float rightScale = 0.8f + scale * 0.2f;
         float leftScale = 1 - 0.3f * scale;
@@ -92,7 +94,7 @@ public class AtyMain extends AtyBase implements ViewHead.ViewHeadListener{
         ViewHelper.setPivotY(mContent, mContent.getMeasuredHeight() / 2);
         mContent.invalidate();
         ViewHelper.setScaleX(mContent, rightScale);
-        ViewHelper.setScaleY(mContent, rightScale);
+        ViewHelper.setScaleY(mContent, rightScale);*/
     }
 
     @Override

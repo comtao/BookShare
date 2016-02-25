@@ -10,7 +10,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <com.lt.book.ui.view.ViewHead
             android:id="@+id/view_head"
             android:layout_width="match_parent"
@@ -18,12 +17,11 @@
             app:left_icon="@mipmap/ic_back"
             app:head_color="#474747"
             app:title_value="附近的书"/>
-        <LinearLayout
+        <ListView
+            android:id="@+id/lv_books"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/view_head"
-            android:background="#55000000">
-        </LinearLayout>
+            android:layout_below="@id/view_head"/>
     </RelativeLayout>
 
     <fragment
