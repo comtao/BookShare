@@ -136,7 +136,7 @@ public class ViewHead  extends RelativeLayout implements View.OnClickListener{
     }
 
     public interface ViewHeadListener {
-        public void leftListener();
-        public void rightListener();
+        void leftListener();
+        void rightListener();
     }
 }
