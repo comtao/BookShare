@@ -2,10 +2,10 @@ package com.lt.book.ui.aty;
 
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
 import com.lt.book.R;
 import com.lt.book.bean.Book;
@@ -20,12 +20,12 @@ import java.util.List;
 /**
  * Created by tao.lai on 2016/1/30 0030.
  */
-public class AtyMain extends AtyBase implements ViewHead.ViewHeadListener{
+public class AtyMain extends AtyBase implements ViewHead.ViewHeadListener,AdapterBooks.OnRecyclerViewListener {
     private static final String TAG = "AtyMain";
 
     private DrawerLayout mDrawerLayout;
     private ViewHead vhTitle;
-    private ListView lvBooks;
+    private RecyclerView rvBooks;
 
     private AdapterBooks adapterBooks;
     private List<Book> list;
@@ -40,21 +40,20 @@ public class AtyMain extends AtyBase implements ViewHead.ViewHeadListener{
 
     private void initViews(){
         vhTitle = (ViewHead) generateFindViewById(R.id.view_head);
-        lvBooks = (ListView) generateFindViewById(R.id.lv_books);
+        rvBooks = (RecyclerView) generateFindViewById(R.id.rv_books);
         mDrawerLayout = generateFindViewById(R.id.id_drawerLayout);
         mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.RIGHT);
     }
     private void initEvents(){
         initTestBookData();
         vhTitle.setViewHeadListener(this);
-        adapterBooks = new AdapterBooks(this, list ,R.layout.item_books);
-        lvBooks.setAdapter(adapterBooks);
-        lvBooks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                T.showShort(AtyMain.this,"书名："+list.get(position).getTitle());
-            }
-        });
+
+        rvBooks.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        rvBooks.setLayoutManager(layoutManager);
+        adapterBooks = new AdapterBooks(list);
+        adapterBooks.setOnRecyclerViewListener(this);
+        rvBooks.setAdapter(adapterBooks);
 
         mDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -98,6 +97,9 @@ public class AtyMain extends AtyBase implements ViewHead.ViewHeadListener{
 
     @Override
     public void leftListener() {
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN,Gravity.RIGHT);
+
+
         T.showShort(this, "左侧菜单显示");
         /*View mContent = mDrawerLayout.getChildAt(0);
         View mMenu = mDrawerLayout.getChildAt(1);
@@ -120,6 +122,17 @@ public class AtyMain extends AtyBase implements ViewHead.ViewHeadListener{
     @Override
     public void rightListener() {
 
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        T.showShort(this,""+list.get(position).getTitle());
+
+    }
+
+    @Override
+    public boolean onItemLongClick(int position) {
+        return false;
     }
 
     private void initTestBookData(){
