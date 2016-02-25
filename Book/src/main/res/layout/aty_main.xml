@@ -16,12 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:left_icon="@mipmap/ic_back"
-            app:right_icon="@mipmap/ic_back"/>
+            app:head_color="#474747"
+            app:title_value="附近的书"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@id/view_head"
             android:background="#55000000">
-
         </LinearLayout>
     </RelativeLayout>
 

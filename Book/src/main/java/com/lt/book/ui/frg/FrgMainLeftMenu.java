@@ -16,6 +16,7 @@ import com.lt.book.R;
 import com.lt.book.bean.User;
 import com.lt.book.global.GlobalContext;
 import com.lt.book.ui.adapter.AdapterFriends;
+import com.lt.book.ui.aty.AtyChat;
 import com.lt.book.ui.aty.AtyShareBook;
 import com.lt.book.utils.T;
 
@@ -49,6 +50,7 @@ public class FrgMainLeftMenu extends Fragment implements View.OnClickListener{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 User u = getList().get(position);
                 T.showShort(GlobalContext.getInstance(),u.getUsername());
+                startActivity(new Intent(GlobalContext.getInstance(), AtyChat.class));
             }
         });
         return view;

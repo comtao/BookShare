@@ -33,6 +33,11 @@ public class AtyBase extends FragmentActivity {
             return null;
     }
 
+    public void onEvent(Boolean empty){
+
+    }
+
+
     protected <T extends View> T generateFindViewById(int id) {
         return (T) findViewById(id);
     }
