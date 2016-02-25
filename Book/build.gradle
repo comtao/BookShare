@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 22
     buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.lt.book"
-        minSdkVersion 4
-        targetSdkVersion 23
+        minSdkVersion 14
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -26,5 +26,9 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.android.support:support-v4:+'
     compile 'com.nineoldandroids:library:2.4.0+'
+    compile('com.android.support:appcompat-v7:22.2.0') {
+        exclude module: 'support-annotations'
+    }
+    compile 'com.android.support:recyclerview-v7:22.2.0'
     testCompile 'junit:junit:4.12'
 }

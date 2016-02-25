@@ -60,8 +60,8 @@ public class AtyLogin extends AtyBase implements ILogin,View.OnClickListener {
             return;
         }
         User user = new User();
-        user.setName(name);
-        user.setPassWord(pwd);
+        user.setUsername(name);
+        user.setPassword(pwd);
         userPresenter.doLogin(user);
     }
 

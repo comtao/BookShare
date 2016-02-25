@@ -23,6 +23,6 @@ public class AdapterFriends extends CommonAdapter<User> {
         ImageView ivAvatar = helper.getView(R.id.iv_avatar);
         TextView textView = helper.getView(R.id.tv_name);
         ivAvatar.setImageResource(R.mipmap.ic_launcher);
-        textView.setText(item.getName());
+        textView.setText(item.getUsername());
     }
 }

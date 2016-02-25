@@ -48,7 +48,7 @@ public class FrgMainLeftMenu extends Fragment implements View.OnClickListener{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 User u = getList().get(position);
-                T.showShort(GlobalContext.getInstance(),u.getName());
+                T.showShort(GlobalContext.getInstance(),u.getUsername());
             }
         });
         return view;
@@ -59,7 +59,7 @@ public class FrgMainLeftMenu extends Fragment implements View.OnClickListener{
         User user;
         for (int i = 0; i < 30; i++) {
             user = new User();
-            user.setName("帅哥" + i);
+            user.setUsername("帅哥" + i);
             list.add(user);
         }
         return list;

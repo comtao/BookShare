@@ -1,10 +1,15 @@
 package com.lt.book.utils;
 
 import android.graphics.BitmapFactory;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.imageaware.ImageAware;
+import com.nostra13.universalimageloader.core.imageaware.ImageViewAware;
 
 import java.io.InputStream;
 import java.lang.reflect.Field;
@@ -13,6 +18,21 @@ import java.lang.reflect.Field;
  * Created by tao.lai on 2016/2/22 0022.
  */
 public class ImageUtils {
+
+
+    public static void setAvatar(String avatar,int defaultRes,ImageView iv){
+        if(avatar!=null && !TextUtils.isEmpty(avatar)){
+            if(!avatar.equals(iv.getTag())){//增加tag标记，减少UIL的display次数
+                iv.setTag(avatar);
+                //不直接display imageview改为ImageAware，解决ListView滚动时重复加载图片
+                ImageAware imageAware = new ImageViewAware(iv, false);
+                ImageLoader.getInstance().displayImage(avatar, imageAware, DisplayConfig.getDefaultOptions(true,defaultRes));
+            }
+        } else {
+            iv.setImageResource(defaultRes);
+        }
+    }
+
     /**
      * 根据InputStream获取图片实际的宽度和高度
      *

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Book/src/main/res/drawable/base_comment_emo_bar.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Book/src/main/res/drawable/chat_left_qp.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Book/src/main/res/drawable/chat_right_qp.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Book/src/main/res/mipmap-xxhdpi/chat_fail_resend_normal.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Book/src/main/res/mipmap-xxhdpi/chat_fail_resend_press.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Book/src/main/res/mipmap-xxhdpi/chat_send_n.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Book/src/main/res/mipmap-xxhdpi/chat_send_p.png" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

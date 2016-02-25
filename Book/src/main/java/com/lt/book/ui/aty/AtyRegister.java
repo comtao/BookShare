@@ -61,8 +61,8 @@ public class AtyRegister extends AtyBase implements IRegister,View.OnClickListen
             return;
         }
         User user = new User();
-        user.setName(name);
-        user.setPassWord(pwd);
+        user.setUsername(name);
+        user.setPassword(pwd);
         userPresenter.doRegister(user);
     }
 
