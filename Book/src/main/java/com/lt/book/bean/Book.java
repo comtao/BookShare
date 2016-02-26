@@ -2,11 +2,13 @@ package com.lt.book.bean;
 
 import java.io.Serializable;
 
+import cn.bmob.v3.BmobObject;
+
 /**
  * Created by tao.lai on 2016/1/30 0030.
  * 2016/2/22
  */
-public class Book implements Serializable {
+public class Book extends BmobObject implements Serializable {
     private String tags;//书本标签
     private String isbn10;//10位ISBN
     private String isbn13;
