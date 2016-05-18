@@ -2,6 +2,5 @@
 <resources>
     <color name="transparent">#00000000</color>
     <color name="white">#ffffffff</color>
-
-    <color name="head_view_color">#474747</color>
+    <color name="head_view_color">#62f782</color>
 </resources>

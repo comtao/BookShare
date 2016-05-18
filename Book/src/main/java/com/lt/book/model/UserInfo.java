@@ -36,6 +36,7 @@ public class UserInfo implements IUserInfo {
             @Override
             public void onSuccess() {
                 listener.onSuccess(null);
+
             }
 
             @Override

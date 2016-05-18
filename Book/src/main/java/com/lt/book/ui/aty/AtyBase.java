@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
+import com.lt.book.global.Configs;
+
+import cn.bmob.v3.Bmob;
 import de.greenrobot.event.EventBus;
 
 /**
@@ -16,7 +19,7 @@ public class AtyBase extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Bmob.initialize(this, Configs.BOMB_APP_ID);
+        Bmob.initialize(this, Configs.BOMB_APP_ID);
         EventBus.getDefault().register(this);
     }
 

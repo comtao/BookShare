@@ -350,7 +350,6 @@ public class AtyShareBook extends AtyBase implements SurfaceHolder.Callback, Vie
     @Override
     public void leftListener() {
         AtyShareBook.this.finish();
-
     }
 
     @Override

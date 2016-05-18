@@ -26,17 +26,17 @@
         android:icon="@mipmap/ic_launcher"
         android:theme="@android:style/Theme.Light.NoTitleBar">
 
-        <activity android:name=".ui.aty.AtyMain">
+        <activity android:name=".ui.aty.AtyLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.aty.AtyShareBook"/>
-        <activity android:name=".ui.aty.AtyLogin"/>
+        <!--<activity android:name=".ui.aty.AtyLogin"/>-->
         <activity android:name=".ui.aty.AtyRegister"/>
         <activity android:name=".ui.aty.AtyChat"/>
-        <!--<activity android:name=".ui.aty.AtyMain"/>-->
+        <activity android:name=".ui.aty.AtyMain"/>
 
         <!-- bmobim start -->
         <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver" >
@@ -57,7 +57,7 @@
         <!-- 设置bmob appkey -->
         <meta-data
             android:name="Bmob_APP_KEY"
-            android:value="87ab0f9bee41bce86dfadd69af692873" />
+            android:value="6c0ee20a0f3b47db703bf91746992af6" />
         <!-- bmobim end -->
     </application>
 </manifest>
