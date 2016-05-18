@@ -10,7 +10,7 @@
         android:id="@+id/vh_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        lls:head_color="#000000"
+        lls:head_color="@color/head_view_color"
         lls:left_icon="@mipmap/ic_back"
         lls:title_value="girls"/>
 

@@ -7,6 +7,7 @@ import com.lt.book.R;
 import com.lt.book.ui.adapter.AdapterChat;
 
 import cn.bmob.newim.bean.BmobIMConversation;
+import cn.bmob.newim.core.BmobIMClient;
 
 /**
  * 聊天窗口
@@ -16,12 +17,12 @@ public class AtyChat extends AtyBase{
 
     private AdapterChat adapter;
     private LinearLayoutManager layoutManager;
-    private BmobIMConversation c;
+    private BmobIMConversation c;  //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty_chat);
-        //c = BmobIMConversation.obtain(BmobIMClient.getInstance(), (BmobIMConversation) getBundle().getSerializable("c"));
+        c = BmobIMConversation.obtain(BmobIMClient.getInstance(), (BmobIMConversation) getBundle().getSerializable("c"));
     }
 }

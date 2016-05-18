@@ -3,11 +3,15 @@ package com.lt.book.presenter;
 import android.os.Handler;
 
 import com.lt.book.bean.User;
+import com.lt.book.global.GlobalContext;
 import com.lt.book.model.IOnResultListener;
 import com.lt.book.model.IUserInfo;
 import com.lt.book.model.UserInfo;
 import com.lt.book.ui.Iaty.IRegister;
 import com.lt.book.ui.Iaty.ILogin;
+
+import cn.bmob.v3.BmobUser;
+
 
 /**
  * Created by tao.lai on 2016/2/22 0022.
@@ -70,6 +74,7 @@ public class UserPresenter {
         iUserInfo.login(user, new IOnResultListener() {
             @Override
             public void onSuccess(Object obj) {
+                GlobalContext.getInstance().setUser(BmobUser.getCurrentUser(GlobalContext.getInstance(), User.class));
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
